@@ -12,4 +12,4 @@ import { IndexRouter } from "./index.router";
   imports: [CommonModule, FormsModule, IonicModule, IndexRouter],
   declarations: [IndexPage]
 })
-export class IndexModule {}
+export class IndexPageModule {}
