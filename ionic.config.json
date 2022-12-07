@@ -1,7 +1,0 @@
-{
-  "name": "efac.xyz",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "angular"
-}
