@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import {LoginButton, LogoutButton} from '../components/hello.1.js'
+// import {LoginControl} from '../components/hello.2.js'
 
 export default function Home() {
   return (
@@ -11,13 +13,18 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js</a> on Docker!
+          Let's learn <a href="https://nextjs.org">Next.js</a> on Docker!
         </h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <div>
+          <LoginButton/>
+          <LogoutButton/>
+        </div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
