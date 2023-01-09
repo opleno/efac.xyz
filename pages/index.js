@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {LoginButton, LogoutButton} from '../components/hello.1.js'
-// import {LoginControl} from '../components/hello.2.js'
+// import {LoginButton, LogoutButton} from '../components/hello.1.js'
+import LoginControl from '../components/hello.2.js'
 
 export default function Home() {
   return (
@@ -21,10 +21,7 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
 
-        <div>
-          <LoginButton/>
-          <LogoutButton/>
-        </div>
+        <div><LoginControl /></div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
