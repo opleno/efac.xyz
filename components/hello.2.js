@@ -11,7 +11,11 @@ function GuestGreeting(props) {
 
 function Greeting(props) {
   const isLoggedIn = props.isLoggedIn;
-  if (isLoggedIn) {    return <UserGreeting />;  }  return <GuestGreeting />;}
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
 
 class LoginControl extends Component {
   constructor(props) {
@@ -41,10 +45,10 @@ class LoginControl extends Component {
 
     return (
       <div>
-        <Greeting isLoggedIn={isLoggedIn}/>
+        {!isLoggedIn && <Greeting isLoggedIn={isLoggedIn} />}
         {button}
       </div>
-    )
+    );
   }
 }
 
