@@ -24,10 +24,10 @@ class LoginControl extends Component {
   }
 
   handleLoginClick() {
-    this.state = { isLoggedIn: false };
+    this.setState({ isLoggedIn: true });
   }
   handleLogoutClick() {
-    this.state = { isLoggedIn: false };
+    this.setState({ isLoggedIn: false });
   }
 
   render() {
