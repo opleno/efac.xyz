@@ -26,3 +26,7 @@ a {
   font-family: Avenir; */
 }
 
+.web-logo {
+  margin-top: 35px;
+  margin-bottom: -35px;
+}

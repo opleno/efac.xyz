@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 // import {LoginButton, LogoutButton} from '../components/hello.1.js'
 import LoginControl from "../components/hello.2.js";
+import WebLogo from "../components/logo"
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <WebLogo/>
       <main className={styles.main}>
         <h1 className={styles.title}>
           Read <Link href="/posts/first-post">this page</Link>!
