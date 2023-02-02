@@ -2,75 +2,46 @@ import Head from "next/head";
 import Link from "next/link";
 
 import styles from "../styles/Home.module.css";
+import utilStyles from "../styles/utils.module.css";
 // import {LoginButton, LogoutButton} from '../components/hello.1.js'
 import LoginControl from "../components/hello.2.js";
-import WebLogo from "../components/logo"
+import Layout, { siteTitle } from "../components/layout";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <WebLogo/>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Read <Link href="/posts/first-post">this page</Link>!
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+      <section className={utilStyles.headingMd}>
+        <p>[EFAC XYZ Introduction]</p>
+        <p>
+          (This is a sample website - you’ll be building a site like this on{" "}
+          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
-
+        <LoginControl />
+      </section>
+      <footer className={styles.footer}>
         <div>
-          <LoginControl />
-        </div>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="https://efac.xyz" target="_blank" rel="noopener noreferrer">
+            ®EFAC XYZ 2019
+            <img
+              src="/images/profile.png"
+              alt="EFAC Logo"
+              className={styles.logo}
+            />
           </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
           <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
-            className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            Powered by
+            <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
           </a>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
       </footer>
-    </div>
+    </Layout>
   );
 }
