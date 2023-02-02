@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
 // import {LoginButton, LogoutButton} from '../components/hello.1.js'
-import LoginControl from "../components/hello.2.js";
+import LoginControl from "../components/LoginControl.js";
 import Layout, { siteTitle } from "../components/layout";
 
 export default function Home() {

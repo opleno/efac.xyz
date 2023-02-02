@@ -1,12 +1,12 @@
 import { Component } from "react";
 import { LoginButton, LogoutButton } from "./hello.1";
-
+import Alert from "./alert.jsx"
 function UserGreeting(props) {
-  return <h1>Welcome back!</h1>;
+  return <Alert type="success"><h1>Welcome back!</h1></Alert>;
 }
 
 function GuestGreeting(props) {
-  return <h1>Please sign up.</h1>;
+  return <Alert type="error"><h1>Please sign up.</h1></Alert>;
 }
 
 function Greeting(props) {
