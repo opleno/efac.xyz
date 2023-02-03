@@ -1,24 +1,50 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { FormattedMessage, useIntl } from "react-intl";
 
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
-// import {LoginButton, LogoutButton} from '../components/hello.1.js'
 import LoginControl from "../components/LoginControl.js";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 
-export default function Home() {
+export default function Home({ dir }) {
+  const { locales } = useRouter();
+
+  const intl = useIntl();
+
+  const siteTitle = intl.formatMessage({ id: "page.home.head.title" });
+  const description = intl.formatMessage({ id: "page.home.head.meta.description" });
+
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <meta name="description" content={description} />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Add hreflang links */}
+        <link rel="alternate" href="http://www.efac.xyz" hrefLang="x-default" />
+        <link rel="alternate" href="http://www.efac.xyz/en-US" hrefLang="en" />
+        <link rel="alternate" href="http://www.efac.xyz/ar" hrefLang="ar" />
+        <link rel="alternate" href="http://www.efac.xyz/fr" hrefLang="fr" />
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[EFAC XYZ Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+      <header>
+        <div className={styles.languages}>
+          {[...locales].sort().map((locale) => (
+            <Link key={locale} href="/" locale={locale}>
+              | {locale} | 
+            </Link>
+          ))}
+        </div>
+      </header>
+
+      <section dir={dir} className={utilStyles.headingSm}>
+        <h1 className={styles.title}>
+          <FormattedMessage id="page.home.title" values={{ b: (chunks) => <b>{chunks}</b> }} />
+        </h1>
+        <p className={styles.description}>
+          <FormattedMessage id="page.home.description" />
         </p>
         <LoginControl />
       </section>
