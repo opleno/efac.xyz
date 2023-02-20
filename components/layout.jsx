@@ -10,6 +10,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import MenuLayout from "./menuLayout"
 
 const name = 'EFAC XYZ';
 export const siteTitle = 'EFAC XYZ Sample with Next.js';
@@ -44,6 +45,7 @@ export default function Layout({ children, home }) {
               alt=""
             />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <MenuLayout/>
           </>
         ) : (
           <>
@@ -62,6 +64,7 @@ export default function Layout({ children, home }) {
                 {name}
               </Link>
             </h2>
+            <MenuLayout/>
           </>
         )}
       </header>
