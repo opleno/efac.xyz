@@ -6,7 +6,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
 import LoginControl from "../components/LoginControl.js";
-import Layout from "../components/layout";
+import Layout from "../components/layoutComponents/layout";
 import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
 

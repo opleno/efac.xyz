@@ -1,0 +1,15 @@
+.menu_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+.top_menu {
+  background-color: #e5e5e5;
+}
+
+.bottom_menu {
+  background-color: #f5f5f5;
+}
