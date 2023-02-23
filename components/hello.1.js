@@ -1,4 +1,3 @@
-
 export function LoginButton(props) {
   return (
     <button className="test1-button" onClick={props.onClick}>
