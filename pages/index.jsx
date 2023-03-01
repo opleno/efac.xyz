@@ -5,10 +5,9 @@ import { FormattedMessage, useIntl } from "react-intl";
 
 import styles from "../styles/Home.module.css";
 import utilStyles from "../styles/utils.module.css";
-import LoginControl from "../components/LoginControl.js";
-import Layout from "../components/layoutComponents/layout";
+import Layout from "../components/Layout/Layout";
 import { getSortedPostsData } from "../lib/posts";
-import Date from "../components/date";
+import Date from "../components/Date";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -62,7 +61,6 @@ export default function Home({ dir, allPostsData }) {
         <p className={styles.description}>
           <FormattedMessage id="page.home.description" />
         </p>
-        <LoginControl />
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>

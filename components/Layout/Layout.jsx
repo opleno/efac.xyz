@@ -1,17 +1,11 @@
-// import styles from "./layout.module.css";
-
-// export default function Layout({ children }) {
-//   return <div className={styles.container}>{children}</div>;
-// }
-
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
-import MenuLayout from "./menuLayout";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import MenuLayout from "./MenuLayout";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const name = "EFAC XYZ";
 export const siteTitle = "EFAC XYZ Sample with Next.js";
