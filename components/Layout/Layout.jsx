@@ -5,6 +5,7 @@ import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 import MenuLayout from "./MenuLayout";
 import Navbar from "./Navbar";
+import MixedMenu from "./MixedMenu";
 import Footer from "./Footer";
 
 const name = "EFAC XYZ";
@@ -63,6 +64,7 @@ export default function Layout({ children, home }) {
       </header>
       <MenuLayout />
       <Navbar />
+      <MixedMenu />
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
