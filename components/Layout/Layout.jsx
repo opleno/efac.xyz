@@ -5,6 +5,7 @@ import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
 import MenuLayout from "./MenuLayout";
 import Navbar from "./Navbar";
+import PrettyNavbar from "./PrettyNavbar";
 import MixedMenu from "./MixedMenu";
 import Footer from "./Footer";
 
@@ -63,7 +64,8 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <MenuLayout />
-      <Navbar />
+      {/* <Navbar /> */}
+      <PrettyNavbar />
       <MixedMenu />
       <main>{children}</main>
       {!home && (

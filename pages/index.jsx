@@ -8,6 +8,7 @@ import utilStyles from "../styles/utils.module.css";
 import Layout from "../components/Layout/Layout";
 import { getSortedPostsData } from "../lib/posts";
 import Date from "../components/Date";
+import bg from "../public/images/wallpaper.jpg";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
