@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from './menuLayout.module.css';
+import styles from "./menuLayout.module.css";
 
 function MenuLayout() {
   return (
