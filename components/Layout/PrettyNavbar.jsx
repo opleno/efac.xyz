@@ -1,9 +1,11 @@
 import React from "react";
 import Link from "next/link";
 
+import LoginButton from "./LoginButton";
+
 const PrettyNavbar = () => {
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-gray-800 rounded-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
@@ -31,6 +33,7 @@ const PrettyNavbar = () => {
               >
                 Blog
               </Link>
+              <LoginButton />
             </div>
           </div>
         </div>
