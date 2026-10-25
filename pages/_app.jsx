@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { IntlProvider } from "react-intl";
+import { Analytics } from "@vercel/analytics/react";
 
 import es from "../lang/es.json";
 import en_US from "../lang/en-US.json";
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <IntlProvider locale={locale} messages={messages[locale]}>
       <Component {...pageProps} dir={getDirection(locale)} />
+      <Analytics />
     </IntlProvider>
   );
 }
